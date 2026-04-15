@@ -4,19 +4,15 @@ pipeline {
     stages {
         stage('Build Docker Image') {
             steps {
-                script {
-                    docker.build("my-app")
-                }
+                sh 'docker build -t my-app .'
             }
         }
 
         stage('Run Container') {
             steps {
-                script {
-                    sh 'docker stop my-app || true'
-                    sh 'docker rm my-app || true'
-                    sh 'docker run -d -p 80:80 --name my-app my-app'
-                }
+                sh 'docker stop my-app || true'
+                sh 'docker rm my-app || true'
+                sh 'docker run -d -p 80:80 --name my-app my-app'
             }
         }
     }
