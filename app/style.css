@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 40px;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+/* Products */
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+/* Card Design */
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    width: 220px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Hover effect */
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* Button */
+button {
+    background: #ff7a18;
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff512f;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
