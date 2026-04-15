@@ -2,13 +2,6 @@ pipeline {
     agent any
 
     stages {
-
-        stage('Clone Code') {
-            steps {
-                git 'https://github.com/anu1240/Devops-vle6.git'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 script {
